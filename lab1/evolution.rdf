@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+
+  <!-- Определение онтологии -->
+  <owl:Ontology rdf:about="http://example.org/ontology"/>
+
+  <!-- Классы -->
+  <owl:Class rdf:about="#Animal"/>
+  <owl:Class rdf:about="#Predator"/>
+  <owl:Class rdf:about="#Scavenger"/>
+  <owl:Class rdf:about="#Aquatic"/>
+  <owl:Class rdf:about="#Poisonous"/>
+  <owl:Class rdf:about="#FatReserve"/>
+  <owl:Class rdf:about="#Collaboration"/>
+  <owl:Class rdf:about="#Camouflage"/>
+
+  <!-- Свойства -->
+  <owl:ObjectProperty rdf:about="#eats">
+    <rdfs:domain rdf:resource="#Predator"/>
+    <rdfs:range rdf:resource="#Animal"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="#collaborates">
+    <rdfs:domain rdf:resource="#Animal"/>
+    <rdfs:range rdf:resource="#Animal"/>
+  </owl:ObjectProperty>
+
+  <owl:DatatypeProperty rdf:about="#requiresAdditionalFood">
+    <rdfs:domain rdf:resource="#Animal"/>
+    <rdfs:range rdf:resource="&xsd;string"/>
+  </owl:DatatypeProperty>
+
+  <owl:ObjectProperty rdf:about="#hasCamouflage">
+    <rdfs:domain rdf:resource="#Animal"/>
+    <rdfs:range rdf:resource="#Camouflage"/>
+  </owl:ObjectProperty>
+
+  <!-- Экземпляры (Individual) -->
+  <rdf:Description rdf:about="#animal1">
+    <rdf:type rdf:resource="#Animal"/>
+    <rdf:type rdf:resource="#Predator"/>
+    <rdf:type rdf:resource="#Aquatic"/>
+    <rdf:type rdf:resource="#FatReserve"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#animal2">
+    <rdf:type rdf:resource="#Animal"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#animal3">
+    <rdf:type rdf:resource="#Animal"/>
+    <rdf:type rdf:resource="#Poisonous"/>
+    <rdf:type rdf:resource="#Aquatic"/>
+    <rdf:type rdf:resource="#Scavenger"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#animal4">
+    <rdf:type rdf:resource="#Animal"/>
+    <rdf:type rdf:resource="#Scavenger"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#animal5">
+    <rdf:type rdf:resource="#Animal"/>
+    <rdfs:label>Camouflage</rdfs:label>
+  </rdf:Description>
+
+  <!-- Связи -->
+  <rdf:Description rdf:about="#animal1">
+    <eats rdf:resource="#animal2"/>
+    <collaborates rdf:resource="#animal2"/>
+    <hasCamouflage rdf:resource="#camouflage1"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#animal2">
+    <collaborates rdf:resource="#animal3"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#animal3">
+    <requiresAdditionalFood rdf:datatype="&xsd;string">pest</requiresAdditionalFood>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#camouflage1">
+    <rdf:type rdf:resource="#Camouflage"/>
+    <rdfs:label>Large</rdfs:label>
+  </rdf:Description>
+
+</rdf:RDF>
