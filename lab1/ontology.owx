@@ -1,0 +1,197 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/kosti/ontologies/2024/8/untitled-ontology-4"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/kosti/ontologies/2024/8/untitled-ontology-4">
+    <Prefix name="" IRI="http://www.semanticweb.org/kosti/ontologies/2024/8/untitled-ontology-4/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#Водоплавающее"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Животное"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Падальщик"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Хищник"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Ядовитое"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#Вымирает"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#Ест"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#ЖировойЗапас"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#Накормлено"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#Сотрудничество"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#ЖировойЗапас"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Животное1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Животное2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Животное3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Животное4"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Животное5"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Животное6"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Животное7"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Животное8"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#Водоплавающее"/>
+        <Class IRI="#Животное"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Падальщик"/>
+        <Class IRI="#Животное"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Хищник"/>
+        <Class IRI="#Животное"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Ядовитое"/>
+        <Class IRI="#Животное"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="#Водоплавающее"/>
+        <NamedIndividual IRI="#Животное1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Хищник"/>
+        <NamedIndividual IRI="#Животное1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Водоплавающее"/>
+        <NamedIndividual IRI="#Животное3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Ядовитое"/>
+        <NamedIndividual IRI="#Животное3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Падальщик"/>
+        <NamedIndividual IRI="#Животное4"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Ядовитое"/>
+        <NamedIndividual IRI="#Животное5"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Хищник"/>
+        <NamedIndividual IRI="#Животное6"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Водоплавающее"/>
+        <NamedIndividual IRI="#Животное7"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Падальщик"/>
+        <NamedIndividual IRI="#Животное8"/>
+    </ClassAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ЖировойЗапас"/>
+        <NamedIndividual IRI="#Животное6"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ЖировойЗапас"/>
+        <NamedIndividual IRI="#Животное7"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ЖировойЗапас"/>
+        <NamedIndividual IRI="#Животное8"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+    </DataPropertyAssertion>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#Вымирает"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Вымирает"/>
+            <Class IRI="#Животное"/>
+        </ObjectSomeValuesFrom>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#Ест"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Ест"/>
+            <Class IRI="#Хищник"/>
+        </ObjectSomeValuesFrom>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#Накормлено"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Накормлено"/>
+            <Class IRI="#Животное"/>
+        </ObjectSomeValuesFrom>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#Сотрудничество"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Сотрудничество"/>
+            <Class IRI="#Животное"/>
+        </ObjectSomeValuesFrom>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#Ест"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Ест"/>
+            <Class IRI="#Животное"/>
+        </ObjectSomeValuesFrom>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#Сотрудничество"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Сотрудничество"/>
+            <Class IRI="#Животное"/>
+        </ObjectSomeValuesFrom>
+    </ObjectPropertyRange>
+    <DataPropertyDomain>
+        <DataProperty IRI="#ЖировойЗапас"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#ЖировойЗапас"/>
+            <Class IRI="#Животное"/>
+        </ObjectSomeValuesFrom>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#ЖировойЗапас"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
